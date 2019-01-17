@@ -18,7 +18,7 @@ func NewAdaptee() *Adaptee {
 }
 
 func (a *Adaptee) SpecificRequest() {
-	fmt.Println("Adaptee SpecificRequest")
+	fmt.Println("Adaptee: SpecificRequest")
 }
 
 // 适配器
@@ -31,8 +31,8 @@ func (a *Adaptor) Request() {
 	a.adaptee.SpecificRequest()
 }
 
-func NewAdaptor() *Adaptor {
+func NewAdaptor(adaptee *Adaptee) *Adaptor {
 	return &Adaptor{
-		adaptee: NewAdaptee(),
+		adaptee: adaptee,
 	}
 }
