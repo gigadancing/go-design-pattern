@@ -10,10 +10,8 @@ import "fmt"
 // 以灯泡(Bulb)和电子管(Tube)为例
 // 将公共的方法封装到接口中
 type Light interface {
-	// 相同的方法
 	TurnOn()
 	TurnOff()
-	// 不同的方法
 	UseFor()
 }
 
